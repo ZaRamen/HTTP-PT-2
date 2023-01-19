@@ -44,10 +44,10 @@ app.post('/api/courses', (req, res) => {
     }
 
     let course = {
-        id: music.length + 1,
+        id: courses.length + 1,
         name: req.body.name,
     }
-    music.push(course);
+    courses.push(course);
 
 
     res.status(200).send(course);
@@ -77,7 +77,7 @@ app.put('/api/courses/:id', (req, res) => {
     }
     if (req.body.genre.length < 3)
 
-    music[req.params.id - 1] = {
+    courses[req.params.id - 1] = {
         id: parseInt(req.params.id),
         name: req.body.name,
     }
