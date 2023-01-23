@@ -75,7 +75,6 @@ app.put('/api/courses/:id', (req, res) => {
         res.status(400).send("Name must have at least 3 characters");
         return;
     }
-    if (req.body.genre.length < 3)
 
     courses[req.params.id - 1] = {
         id: parseInt(req.params.id),
